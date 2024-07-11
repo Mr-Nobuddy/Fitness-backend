@@ -101,7 +101,7 @@ app.get(
 app.get(
   "/auth/google/callback",
   passport.authenticate("login", { failureRedirect: "/error" }),
-  (req, res) => res.redirect(check ? "http://localhost:3000/signup":"http://localhost:3000/caloriecounter")
+  (req, res) => res.redirect(check ? "https://no-limit-fitness.vercel.app/signup":"https://no-limit-fitness.vercel.app/caloriecounter")
 );
 
 app.get("/logout", (req, res) => {
