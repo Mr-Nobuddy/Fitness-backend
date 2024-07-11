@@ -86,6 +86,10 @@ passport.deserializeUser(async (id, done) => {
   done(null, user[0]);
 });
 
+app.use('/',(req,res) => {
+  res.send('hello world')
+})
+
 app.get(
   "/auth/google",
   passport.authenticate("login", {
